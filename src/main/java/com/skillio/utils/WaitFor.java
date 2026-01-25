@@ -24,12 +24,18 @@ public class WaitFor {
 	public static void presenceOfElement(By element) {
 		wait.until(ExpectedConditions.presenceOfElementLocated(element));
 	}
+	
+	/**
+	 * This method will wait for specified element for {@code 35 seconds}. 
+	 * If element is not present during max time out, then this method will throw TimeOutException
+	 * @param locator
+	 */
 	public static void presenceOfElement(String locator) {
 		String locatorType = locator.split("##")[0];
 		String locatorValue = locator.split("##")[1];
 		Keyword keyword = new Keyword();
-		WebElement e keyword.getWebElement(locatorType, locatorValue);
-		wait.until(ExpectedConditions.prese)
+		By by = keyword.getBy(locatorType, locatorValue);
+		wait.until(ExpectedConditions.presenceOfElementLocated(by));
 		
 	}
 	

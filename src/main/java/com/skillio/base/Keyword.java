@@ -88,4 +88,8 @@ public class Keyword {
 		String locatorValue = locator.split("##")[1];
 		return getText(locatorType, locatorValue);
 	}
+
+	public void launchUrl(String appUrl) {
+		driver.get(appUrl);
+	}
 }
