@@ -13,10 +13,10 @@ import com.skillio.utils.WaitFor;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-public class TestBase {
+public class Hooks {
 	Keyword keyword = new Keyword();
 
-	//@Before
+	@Before
 	public void setUp() throws Exception {
 		keyword.openBrowser(App.getBrowserName());
 
@@ -49,7 +49,7 @@ public class TestBase {
 
 	}
 
-	//@After
+	@After
 	public void tearDown() {
 		DriverManager.getDriver().quit();
 	}

@@ -1,7 +1,8 @@
 package daffodil25a;
 
-import static com.skillio.utils.OR.locator;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -9,7 +10,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.skillio.base.Keyword;
-import com.skillio.base.TestBase;
 import com.skillio.pages.Dashboard;
 import com.skillio.repo.Locator;
 
@@ -22,7 +22,6 @@ public class MyTestCases {
 	public void verifyEmployeeNameAppearsWhileCreatingAnUser() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		keyword.clickOn(Locator.viewPIMMenu);
-		keyword.clickOn(locator("addBtn"));
 		keyword.enterText(Locator.firstName, "Rushi");
 		keyword.enterText(Locator.lastName, "Kapoor");
 		keyword.clickOn(Locator.saveBtn);
@@ -30,7 +29,7 @@ public class MyTestCases {
 		keyword.clickOn(Locator.adminAddBtn);
 		keyword.enterText(Locator.typeForHints, "Rushi");
 		String empName = keyword.getText(Locator.adminTypeOption);
-		Assert.assertEquals("Rushi Kapoor", empName);
+		AssertJUnit.assertEquals("Rushi Kapoor", empName);
 
 	}
 
@@ -47,7 +46,7 @@ public class MyTestCases {
 		dashboard.clickOnAdminAdd();
 		dashboard.typeForHints("Rushi");
 		String empName = dashboard.getAdminTypeOption();
-		Assert.assertEquals(empName,"Rushi Kapoor");
+		AssertJUnit.assertEquals(empName,"Rushi Kapoor");
 
 	}
 
