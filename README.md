@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AutomationFramework (daffodil25a)
 
 A small Selenium-based automation framework with lightweight helpers for browser management, element locators and simple utilities.
@@ -53,3 +54,6 @@ Contact / Maintainers
 
 License
 - See project root for licensing information (if present).
+=======
+# daffodil25a
+>>>>>>> ed33aef4b96ad0f390d38dfde0807c2bed5d7b8f

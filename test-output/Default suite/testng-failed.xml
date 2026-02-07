@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="daffodil25a.MyTestCases">
+      <class name="daffodil25a.Runner">
         <methods>
-          <include name="setUp"/>
-          <include name="verifyEmployeeNameAppearsWhileCreatingAnUser"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- daffodil25a.MyTestCases -->
+      </class> <!-- daffodil25a.Runner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
